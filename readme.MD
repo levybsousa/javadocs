@@ -226,4 +226,57 @@ public class Carro{
     }
 }
 ````
-### Modificadores de acesso ...
+### Modificadores de acesso
+> Os modificadores de acesso são palavras-chave na
+> linguagem Java. Eles servem para definir a visibilidade que
+> determinada classe ou membro terá diante das outras.
+
+#### tipos de modificadores de acesso:
+* **public**: Com este modificador,
+o acesso é livre em qualquer lugar do programa.
+* **private:** Com este modificador, o acesso é permitido somente dentro da 
+classe onde ele foi declarado. Por padrão, é a visibilidade definida para métodos e atributos em uma classe.
+* **Protected**: Com este modificador, apenas a classe que contém
+o modificador e os tipos derivados dessa classe tem o acesso.
+
+_____________________________________________________________________
+### POO (Programação orientada a objetos)
+
+#### Abstração:
+> Como estamos lidando com uma representação de um objeto real 
+> (o que dá nome ao paradigma), temos que imaginar o que esse objeto irá realizar dentro de nosso sistema. São três pontos que devem ser levados em consideração nessa abstração.
+* Identidade: É preciso dar uma identidade ao objeto que será criado.
+Essa identidade deve ser única dentro do sistema para que não haja conflito.
+
+
+* Propriedades: No mundo real qualquer objeto possui elementos que
+o definem. Dentro da programação orientada a objetos, essas características são nomeadas propriedades. 
+Por exemplo, as propriedades de um objeto “Cachorro” poderiam ser “Tamanho”, “Raça” e “Idade”.
+
+* Métodos: Por fim, a terceira parte é definirmos as ações 
+que o objeto irá executar. Essas ações, ou eventos, são chamados métodos. Esses métodos podem ser 
+extremamente variáveis, desde “Acender()” em um objeto lâmpada até “Latir()” em um objeto cachorro.
+
+#### Encapsulamento:
+>Se trata de um dos elementos que adicionam segurança à
+> aplicação em uma programação orientada a objetos pelo fato de esconder as propriedades, criando uma espécie de caixa preta.
+
+> A maior parte das linguagens orientadas a objetos implementam o encapsulamento baseado em propriedades privadas, ligadas
+> a métodos especiais chamados getters e setters, que irão retornar e setar o valor da propriedade, respectivamente. Essa atitude evita o acesso direto a propriedade do objeto, adicionando uma outra camada de segurança à aplicação.
+
+ > Para fazermos um paralelo com o que vemos no mundo real, temos o encapsulamento em outros elementos.
+ > Por exemplo, quando clicamos no botão ligar da televisão, não sabemos o que está acontecendo internamente. 
+ > Podemos então dizer que os métodos que ligam a televisão estão encapsulados.
+ 
+#### Herança: 
+>  Essa característica otimiza a produção da aplicação em tempo e linhas de código.
+
+> Para entendermos essa característica, vamos imaginar uma família: a criança, por exemplo, está herdando características de seus pais. Os pais, por sua vez, herdam algo dos avós, o que faz com que a criança também o faça, e assim sucessivamente.
+> Na orientação a objetos, a questão é exatamente assim 
+
+#### Polimorfismo :
+> Na natureza, vemos animais que são capazes de alterar sua forma conforme a necessidade, e é dessa ideia que vem o polimorfismo na orientação a objetos. Como sabemos, os objetos filhos herdam as características e ações de seus “ancestrais”. Entretanto, em alguns casos, é necessário que as ações para um mesmo método seja diferente. 
+> Em outras palavras, o polimorfismo consiste na alteração do funcionamento interno de um método herdado de um objeto pai.
+
+> Como um exemplo, temos um objeto genérico “Eletrodoméstico”.
+> Esse objeto possui um método, ou ação, “Ligar()”. Temos dois objetos, “Televisão” e “Geladeira”, que não irão ser ligados da mesma forma. Assim, precisamos, para cada uma das classes filhas, reescrever o método “Ligar()”.
