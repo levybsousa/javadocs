@@ -132,3 +132,98 @@ public class TestaCaes{
 }
 ````
 ### Métodos
+> Os métodos são ações ou
+> procedimentos, onde podem interagir e se comunicarem
+> com outros objetos.
+> Como boas práticas, é indicado sempre usar o nome dos métodos 
+> declarados como verbos
+
+#### Sintaxe:
+[modificador de acesso] + tipo_retorno +nome_do_metodo ([argumentos]) {
+
+}
+#### Exemplo:
+````java
+class Cachoroo {
+    int tamanho;
+    String nome;
+    
+   public void latir(){
+        if(tamanho > 60){
+            System.out.println("Woof Woof");
+        }else if (tamanho > 20){
+            System.out.println("Woof");
+        }else{
+            System.out.println("ZzZzZz");
+        }
+    }
+}
+````
+````java
+public class TestaCachorro{
+    public static void main(String[] args) {
+        Cachorro bob = new Cachorro();
+        bob.tamanho = 70;
+        
+        Cachorro rex = new Cachorro();
+        rex.tamanho = 59;
+        
+        Cachorro zeus = new Cachorro();
+        zeus.tamanho = 19;
+        
+        bob.latir();
+        rex.latir();
+        zeus.latir();
+    }
+}
+````
+### Construtores
+> Também conhecidos pelo inglês constructors, os construtores são os responsáveis por criar o objeto em 
+> memória, ou seja, instanciar a classe que foi definida.
+
+* nota: Em Java apenas as Interfaces não possuem construtores.
+
+#### Exemplo:
+````java
+public class Carro{
+    //construtor da classe Carro
+    public Carro (){
+        // code
+    }
+}
+````
+#### Sintaxe:
+> modificadores de acesso (public nesse caso) + nome da classe (Carro nesse caso) + parâmetros (nenhum definido
+neste caso). 
+
+> O construtor pode ter níveis como: public, private ou protected.
+
+```java
+public class Carro {
+    
+}
+
+public class Aplicacao {
+    
+    Carro fiat = new Carro();
+    // construtor chamado sem parâmetro.
+}
+```
+````java
+public class Carro{
+    public String nome;
+    public String placa;
+    public String cor;
+    
+    public Carro(String nome , String placa , String cor){
+        this.nome = nome;
+        this.placa = placa;
+        this.cor = cor;
+    }
+    public class Concessionaria{
+        Carro ferrari = new Carro("Palio", "air-023","Vermelha");
+        // construtor com 3 parâmetros
+    }
+}
+````
+### Modificadores de acesso ...
