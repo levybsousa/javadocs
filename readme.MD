@@ -1,28 +1,36 @@
 ## Java Docs
 
-> * Linguagem de programação de alto nível orientada a objetos.
-> * Plataforma independente
-> * Não usa ponteiros
-> * Multithread
-> * Perfomace
-> * Segurança
-> * Case sensiteve
-> * Fortemente tipada
-> * Write once , run everywhere
-________________________________________________________
->Fortemente tipada: Fornecer um tipo a variáveis e objetos
-> ````java
- > int valor = 100;
-> System.out.println(valor)
- ____________________________________________________________
-### JRE:
-> Agrega á máquina virtual e alguns recursos para a execução de
-> aplicações java
+### Caracterísitcas da linguagem Java
 
-### JDK:
-> Conjunto de utilitários que oferece suporte ao desenvolvimento
-> de aplicações.
+ * Compilada:
+> Um programa em Java é compilado para o chamado "bytecod" , que
+é próximo as instruções de máquina.
+ * Portável:
+> Java foi criada para ser portável. O "bytecode" gerado pelo 
+compilador para a sua aplicação específica pode ser transportado
+entre plataformas distintas que suportam Java.
 
+* Orientadas a Objetos:
+
+> Java suporta herança , mas não herança múltipla compensada pelo
+uso de interfaces.
+
+* Segurança:
+
+> Presença de coleta automática de lixo,  que evita erros comuns
+ao acessar diretamente a memória.
+
+> Presença de mecanismos de tratamento de exceções que torna as 
+aplicações mais robustas , não permitindo que elas abortem , mesmo
+que rodando sob condições anormais;
+
+* Cocorrência:
+> Permite, de maneira fácil, a criação de vários "threads" de execução;
+
+* Eficiente:
+
+> Exige pouco espaço , pouca memória comparando-se com outras 
+linguagens.
 ### Código:
 
 > myprogram.java ---> compiler ----> myprogram.class ---> jvm ---> bytecode ---> myprogram
@@ -85,7 +93,7 @@ modificador de acesso  + palavra reservada (class)+ NomeDaClasse{
 #### Como declarar:
 > Se declara uma classe da mesma maneira como se  declara uma
 > variável de tipo primitiva.
-> Declaramos o tipo seguido do nome da variável.
+> **Declaramos o tipo seguido do nome da variável.**
 ````java
 Pessoa pessoa1 = new Pessoa ();
 ````
@@ -131,6 +139,112 @@ public class TestaCaes{
     cachorro3.raca = "Dog alemão";
 }
 ````
+### Estruturas condicionais
+
+ * If/Else:
+> O if/else é uma estrutura de condição em que uma expressão 
+> booleana é analisada
+
+ > V || V = V
+
+ > F || V = V
+
+ > V || F = V
+
+ > F || F = F
+  ____________________________________________
+ > F && V = F
+
+ > V && F = F
+
+ > V && V = V
+
+ > F && F = F
+
+ * Switch/case:
+ > A estrutura condicional switch/case vem como alternativa 
+> em momentos em que temos que utilizar múltiplos ifs no
+> código.
+ 
+> O switch/case testa o valor contido em uma
+ > variável, realizando uma comparação com cada uma das opções. Cada uma
+ > dessas possíveis opções é delimitada pela instrução case.
+```java
+public class Exemplo {
+	
+    public static void main(String[] args) {
+        int mes = 2;
+        switch (mes) {
+            case 1:
+                System.out.println(“O mês é janeiro”);
+                break;
+            case 2:
+                System.out.println(“O mês é fevereiro”);
+                break;
+            case 3:
+                System.out.println(“O mês é março”);
+                break;
+            case 4:
+                System.out.println(“O mês é abril”);
+                break;
+            case 5:
+                System.out.println(“O mês é maio”);
+                break;
+            case 6:
+                System.out.println(“O mês é junho”);
+                break;
+          
+            default:
+                System.out.println(“Mês inválido”);
+                break;
+        }
+    }
+	
+}
+```
+ ### Estruturas de repetição
+
+* For: O for é uma estrutura de repetição na qual seu ciclo 
+será executado por um tempo ou condição pré-determinados e 
+em uma quantidade de vezes que determinamos.
+  
+```java
+ for(<varíavel_de_controle> , <análise_de_variável_de_controle) , <incremente_da_variavel_de_controle>) {
+    // código a ser executado
+        }
+```
+>Quando utilizamos o for, precisamos de uma variável para
+> auxiliar a controlar a quantidade de repetições a serem executadas. Essa variável é chamada de variável de controle 
+> e é declarada no primeiro argumento do for.
+
+> O segundo argumento do for é utilizado para definir até 
+> quando o for será executado. Geralmente, trata-se de uma 
+> condição booleana em cima da variável de controle.
+
+>O terceiro argumento indica o quanto a variável de 
+> controle será modificada no final de cada execução dentro do for.
+
+```java
+public class Exemplo {
+	
+    public static void main(String[] args) {
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(“A variável i agora vale “ + i);
+        }
+    }
+	
+}
+```
+ * While:
+> utilizamos o while quando não sabemos exatamente quantas 
+> vezes o código será repetido.
+
+```java
+while (<condição>) {
+        // Trecho de código a ser repetido
+        }
+```
+
 ### Métodos
 > Os métodos são ações ou
 > procedimentos, onde podem interagir e se comunicarem
